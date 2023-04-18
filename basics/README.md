@@ -9,3 +9,8 @@
 - Job
 - workspace
 - build logs
+
+
+
+### Intersting Endpoints
+- curl https://xxxx/job/yyyy/api/json
