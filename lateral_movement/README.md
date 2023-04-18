@@ -1,1 +1,2 @@
 - Requesting an access token with a given token
+- Executing groovy console commands via dumped jenkins-api token
