@@ -24,3 +24,18 @@ stages {
             }
         }
 ```
+- When used without base64
+```
+[Pipeline] stage
+[Pipeline] { (Curl)
+[Pipeline] withCredentials
+Masking supported pattern matches of $user or $pass
+[Pipeline] {
+[Pipeline] sh
++ echo ****
+****
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+```
