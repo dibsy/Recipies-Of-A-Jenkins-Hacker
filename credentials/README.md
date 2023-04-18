@@ -1,6 +1,26 @@
-### Credentials
+# Credentials
 
 - Credentials in Logs
 - Credentials in Description
 - Credentials dumping
 - Kickoff builds using PR from public repo
+
+
+### Credentials Dumping
+
+
+- Credentials Bindings ( https://www.jenkins.io/doc/pipeline/steps/credentials-binding/ )
+``` Groovy
+stages {
+        stage('Curl') {
+            steps {
+                withCredentials(
+                    [usernamePassword(credentialsId: 'mycredentials', usernameVariable: 'user', passwordVariable : 'pass')]
+                ) {
+                    sh '''
+                        echo "$pass" | base64
+                    '''
+                }
+            }
+        }
+```
