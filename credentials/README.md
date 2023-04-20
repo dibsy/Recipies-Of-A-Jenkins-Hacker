@@ -2,7 +2,8 @@
 
 - Credentials in Logs
 - Credentials in Description
-- Credentials dumping
+- Credentials dumping from jobs ( Logged in Used / Users who can modify pipelines )
+- Credentials dumping as an administrator.
 - Kickoff builds using PR from public repo
 
 
