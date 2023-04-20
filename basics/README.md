@@ -13,7 +13,10 @@
 - There can be views avaiable without any need for authentication.
 
 ### Intersting Endpoints
-- curl https://xxxx/job/yyyy/api/json
-- /asynchPeople/
-- /credentials/
-- 
+
+- Controller Endpoints
+   - /asynchPeople/
+   - /credentials/
+
+- Build Endpoints
+   - 
