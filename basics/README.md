@@ -6,8 +6,14 @@
 - Agents - They are the workers which executes the job requested by the controller. It communicates with the controller via the JNLP protocol. The commmunication is usually encrypted.
 - Ephimeral - They are created. They are used. Then they are gone ! No one remembers them ! Usually a secure approach to run agents.
 
+### Jenkins Views
+
+- We can organize how the jobs will look in dashboard using views
+- We can control what kind of view will be served to the end user based on the privileges
+- There can be views avaiable without any need for authentication.
 
 ### Intersting Endpoints
 - curl https://xxxx/job/yyyy/api/json
 - /asynchPeople/
 - /credentials/
+- 
