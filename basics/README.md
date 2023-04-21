@@ -27,3 +27,4 @@
 - Via Pull Requests/New Branch
 
 - Via Automation
+   - https://plugins.jenkins.io/build-token-root/
