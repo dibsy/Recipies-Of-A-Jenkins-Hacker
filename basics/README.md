@@ -17,6 +17,13 @@
 - Controller Endpoints
    - /asynchPeople/
    - /credentials/
-
 - Build Endpoints
-   - 
+   - /job/
+
+### How jobs are triggered 
+
+- Manually
+
+- Via Pull Requests/New Branch
+
+- Via Automation
