@@ -1,2 +1,3 @@
-- Requesting an access token with a given token
-- Executing groovy console commands via dumped jenkins-api token
+- Requesting an access token with a given token.
+- Executing groovy console commands via dumped jenkins-api token.
+- Creating an AWS resources from their dumped tokens.
