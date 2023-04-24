@@ -1,8 +1,45 @@
-- Traverse /api/xml and look for the domains and executors ( Demo Recorded )
-- build logs paths
+# Recon
 
-- Build Logs
-- 
+### Domains and executors ( Demo Recorded )
+
+The two interesting information we can find from this endpoint is 
+- Num Executors of Built-In - If this is set 0, then the builds are carried out in agents, if not then the controller is also used for jobs
+- url - In somecases this will point to the domain, or subdomain. From the analysis of the exposed Jenkins controllers we found this url information can help us to find the organization which this controller belongs to. We tried performing reverse-ip lookups but in somecases it failed or pointed to the cloud infrastructure.
+
+``` xml
+<hudson _class="hudson.model.Hudson">
+<assignedLabel>
+<name>built-in</name>
+</assignedLabel>
+<mode>NORMAL</mode>
+<nodeDescription>the Jenkins controller's built-in node</nodeDescription>
+<nodeName/>
+<numExecutors>0</numExecutors>
+<job _class="hudson.model.FreeStyleProject">
+<name>Test1</name>
+<url>http://52.91.169.109:8080/job/Test1/</url>
+<color>blue</color>
+</job>
+<overallLoad/>
+<primaryView _class="hudson.model.AllView">
+<name>all</name>
+<url>http://52.91.169.109:8080/</url>
+</primaryView>
+<quietingDown>false</quietingDown>
+<slaveAgentPort>-1</slaveAgentPort>
+<unlabeledLoad _class="jenkins.model.UnlabeledLoadStatistics"/>
+<url>http://52.91.169.109:8080/</url>
+<useCrumbs>true</useCrumbs>
+<useSecurity>true</useSecurity>
+<view _class="hudson.model.AllView">
+<name>all</name>
+<url>http://52.91.169.109:8080/</url>
+</view>
+</hudson>
+```
+
+### Build Logs
+ 
 Build Path logs are available at
 ``` 
 https://SERVER/job/JOB_NAME/BUILD_NUMBER/consoleText
