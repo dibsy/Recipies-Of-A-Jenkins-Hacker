@@ -103,3 +103,30 @@ Artifacts from the build are available at
 ```SERVER/job/JOB_NAME/lastSuccessfulBuild/artifact/*zip*/archive.zip```
 
 ```http://3.82.198.32:8080/job/Pipeline1/lastSuccessfulBuild/artifact/*zip*/archive.zip```
+
+### Users
+
+- https://azure-build.debian.net/asynchPeople/api/json?pretty
+``` json
+{
+  "_class" : "hudson.model.View$AsynchPeople$People",
+  "users" : [
+    {
+      "lastChange" : null,
+      "project" : null,
+      "user" : {
+        "absoluteUrl" : "http://52.91.169.109:8080/user/system",
+        "fullName" : "SYSTEM"
+      }
+    },
+    {
+      "lastChange" : null,
+      "project" : null,
+      "user" : {
+        "absoluteUrl" : "http://52.91.169.109:8080/user/superadmin",
+        "fullName" : "SuperAdmin"
+      }
+    }
+  ]
+}
+```
