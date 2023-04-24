@@ -5,7 +5,12 @@ Jenkins Security Research ( 65 minutes presentation )
    - About Me
    - Why this talk ?
    - Agenda
-- Jekins Basics & Internal ( 10 minutes )    
-- Jenkins Attacks( 30 minutes )
+- Jekins Basics & Internal ( 10 minutes ) 
+   - Jenkins Basics
+- Jenkins Unauthenticated Attacks ( 30 minutes )
+   - Jenkins Recon
+   - Jenkins Forensics
+   - Pipeline Attacks via PR
+   - Authenticated Attacks
 - Jenkins Defense( 15 minutes )
 - QA( 10 minutes )
