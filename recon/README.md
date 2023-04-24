@@ -93,3 +93,13 @@ If we are planning to automate our analysis, we can grab the JOB name from http:
   ]
 }
 ```
+
+### Artifacts
+
+Artifacts from the build are available at 
+
+```SERVER/job/JOB_NAME/lastSuccessfulBuild/artifact/ARTIFACT-NAME```
+
+```SERVER/job/JOB_NAME/lastSuccessfulBuild/artifact/*zip*/archive.zip```
+
+```http://3.82.198.32:8080/job/Pipeline1/lastSuccessfulBuild/artifact/*zip*/archive.zip```
