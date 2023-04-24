@@ -1,1 +1,2 @@
-
+- Traverse /api/xml and look for the domains and executors ( Demo Recorded )
+- build logs paths
