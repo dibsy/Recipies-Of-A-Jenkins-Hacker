@@ -14,3 +14,8 @@ Jenkins Security Research ( 65 minutes presentation )
    - Authenticated Attacks
 - Jenkins Defense( 15 minutes )
 - QA( 10 minutes )
+
+
+### References
+- https://medium.com/@gustavo.guss/jenkins-archive-artifact-save-file-in-pipeline-ac6d8b569c2c
+- 
