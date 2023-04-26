@@ -1,4 +1,4 @@
-# Jenkins Security Basics
+# Jenkins Basics
 
 ### Terminiologies
 
