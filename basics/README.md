@@ -8,9 +8,13 @@
 
 ### Jenkins Views
 
-- We can organize how the jobs will look in dashboard using views
-- We can control what kind of view will be served to the end user based on the privileges
+- Think Views like your desk. You can customize what you would like to see on them. 
+- Through views you can organize how your jenkins projects and jobs are displayed, their status, their duration,etc.
+- We can control what kind of view will be served to the end user based on the privileges.
 - There can be views avaiable without any need for authentication.
+- Depending upon how views are configured, they can provide juicy information
+- **DEMO**
+
 
 ### Intersting Endpoints
 
