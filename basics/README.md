@@ -12,9 +12,12 @@
 - Through views you can organize how your jenkins projects and jobs are displayed, their status, their duration,etc.
 - We can control what kind of view will be served to the end user based on the privileges.
 - There can be views avaiable without any need for authentication.
-- Depending upon how views are configured, they can provide juicy information
+- Depending upon how views are configured, they can provide juicy information.
 - **DEMO**
 
+### Jenkins Matrix Authorization Plugin
+- This plugin is installed during installation of Jenkins
+- 
 
 ### Intersting Endpoints
 
@@ -23,6 +26,7 @@
    - /credentials/
 - Build Endpoints
    - /job/
+- Based on how views are configured or how the authorization matrix is set, the forced browsing can be used to view those endpoints.
 
 ### How jobs are triggered 
 
