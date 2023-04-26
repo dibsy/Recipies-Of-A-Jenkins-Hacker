@@ -13,6 +13,6 @@
 
 ### 3 important information for this talk
 - In this talk we are NOT going to exploit any CVE !
-- Look for some jenkins features and misconfigurations
-- We will primarily focus exploiting point 2 !
+- We will look for some jenkins features and misconfigurations.
+- We will focus exploiting point 2 !
 
