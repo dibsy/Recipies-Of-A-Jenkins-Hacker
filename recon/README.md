@@ -47,6 +47,13 @@ Build Path logs are available at
 ``` 
 https://SERVER/job/JOB_NAME/BUILD_NUMBER/consoleText
 ```
+We can download these logs are find information like
+- internal urls
+- credentials
+- personal information
+
+
+
 
 If we are planning to automate our analysis, we can grab the JOB name from http://server/api/json?pretty=true. The jobs object will have the job name
 ``` json
