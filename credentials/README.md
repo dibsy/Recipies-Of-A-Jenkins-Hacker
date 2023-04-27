@@ -52,7 +52,7 @@ stage('Credential Dumping') {
 - Imagine we don't have access to  ```http://host:ip/credentials/``` to list the credentials id
 - We can either look through the code repository hunting for these id or we need a piece of luck we can use Built-In executor
 - When ```# of exectors``` in ```Configure System``` is set to non-zero, we can run builds on the controller, which means we have access to the controllers file system.
-- Reference - 
+- Reference - https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
 ``` Groovy
         stage('Identifier Dumping') {
             steps {
@@ -63,16 +63,18 @@ stage('Credential Dumping') {
         }
 ```
 
+<img src="credential-id-dumping.png">
+
 ### Credentials & Configuration Dumping Build Agents Information
 
 - This will be somewhat a borderline between credential dumping and lateral movement/backdooring.
-- If the Jenkins Controller use SSH to 
-- If somefields are not entered during configuration, then they might throw error ( as I have not used paraphrase , trying to dump paraphrase would throw error )
+- If the Jenkins Controller use SSH to the build agents we can try to dump those ssh keys and get access to the build agents.
+- If some fields are not entered during configuration, then they might throw error while calling  withCredentials(sshUserPrivateKey) ( as I have not used paraphrase , trying to dump paraphrase would throw error )
 - So we need luck here again as configuration files are stored in controller. 
-- Step 1 : Dump the ssh identifiers
-- Step 2 : Dump the ssh keys
-- Step 3 : Dump the nodes configuration ( note : the path to the Worker-Node is found through traversing the nodes under $JENKINS_HOME/nodes)
-- Step 4 : Use the user-name, and hostname and ssh-key to login to the build agent
+   - Step 1 : Dump the ssh identifiers
+   - Step 2 : Dump the ssh keys ( Reference : https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials )
+   - Step 3 : Dump the nodes configuration ( note : the path to the Worker-Node is found through traversing the nodes under $JENKINS_HOME/nodes)
+   - Step 4 : Use the user-name, and hostname and ssh-key to login to the build agent
 ``` Groovy
         stage('Identifier Dumping') {
             steps {
