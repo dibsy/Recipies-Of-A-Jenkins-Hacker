@@ -1,7 +1,7 @@
 # Credentials Dumping
 
 ## Credentials in Text fields in Credentials List
-- .
+- We can find the list of credentials name and id at http://host:ip/credentials/
 - While this sounds very hypothetical, it is very much real to find credentials in text and name section.
 - Possible reason for rewriting credentials in credentials description makes it easier to remember purpose, or for making debugging easy.
 
