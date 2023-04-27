@@ -9,11 +9,11 @@ Jenkins Security Research ( 65 minutes presentation )
 - Jekins Basics ( 10 minutes ) 
 
 - Offensive Jenkins ( 30 minutes )
-   - Jenkins Recon 
+   - Recon 
    - Credentials Dumping
-   - Jenkins Forensics
-   - Jenkins Lateral Movement
-   - Jennkis Backdooring
+   - Forensics
+   - Lateral Movement
+   - Backdooring
    
 - Defensive Jenkins ( 15 minutes )
    - Jenkins Hardening 101
