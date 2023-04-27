@@ -114,7 +114,7 @@ stage('Credential Dumping') {
 ```
 
 <img src="credential-host-configuration.png">
-<img src="">
+<img src="credential-ssh-configuration.png">
 
 
 ## Credentials Dumping from Script Console
