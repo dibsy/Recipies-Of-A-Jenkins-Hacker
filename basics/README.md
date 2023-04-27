@@ -17,7 +17,7 @@
 - **DEMO**
 
 ### Jenkins Matrix Authorization Plugin
-- By default, Authorization is set to "Logged-in Users can do anything"
+- By default, every new user has admin rights and the Authorization is set to "Logged-in Users can do anything"
 <img src="authorization1.png">
 
 - Jenkins Matrix Authorization Plugin is installed during installation of Jenkins
