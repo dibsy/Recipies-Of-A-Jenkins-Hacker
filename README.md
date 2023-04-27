@@ -1,5 +1,4 @@
-# jenkins-security-research
-Jenkins Security Research ( 65 minutes presentation )
+# Recipies of a Jenkins Hacker
 
 - Introduction ( 5 minutes )
    - About Me
