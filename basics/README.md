@@ -21,7 +21,7 @@
 
 ### Intersting Endpoints
 
-- Controller Endpoints
+- Controller Routes
    - Users - http://<host:ip>/asynchPeople/
    - Credentials - http://<host:ip>/credentials/
    - Jobs - http://<host:ip>/job/
