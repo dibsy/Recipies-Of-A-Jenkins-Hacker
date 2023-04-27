@@ -1,7 +1,8 @@
 # Credentials Dumping
 
-## Credentials in Description
-- While this sounds very hypothetical, it is very much real.
+## Credentials in Text fields in Credentials List
+- .
+- While this sounds very hypothetical, it is very much real to find credentials in text and name section.
 - Possible reason for rewriting credentials in credentials description makes it easier to remember purpose, or for making debugging easy.
 
 ## Dumping credentials from logs
