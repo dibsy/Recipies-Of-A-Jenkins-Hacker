@@ -17,3 +17,8 @@
 - We will learn about jenkins internals, features and misconfigurations.
 - We will focus exploiting point 2 !
 
+
+## Agenda
+
+- Jenkins High-Level Basics
+- Jenkins Recon
