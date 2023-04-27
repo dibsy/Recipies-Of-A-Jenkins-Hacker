@@ -48,3 +48,6 @@ stage('Credential Dumping') {
 ```        
 
 ## Credentials Dumping from Script Console
+
+## References
+- https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
