@@ -6,14 +6,14 @@
 - Work in Umbrella Engineering
 
 ### Why I decided to do this talk ?
-- Previously I used to think Jenkins can be compromised in these two ways
+- Previously I used to think Jenkins can be compromised in two possible ways
    - Exploit CVE
-   - Execute a Groovy Script in Script Console as an admin.
-- I had an opinion if either of these two conditions are not met then Jenkins is secure.
-- Sharing my observations how Jenkins is being used by various teams and studying those internet exposed Jenkins instances. 
+   - Execute a Groovy Script in Script Console.
+- I had an opinion if these two conditions are met then Jenkins is secure.
+- Sharing my observations how Jenkins is being used by various teams and studying those internet exposed Jenkins instances ( nearly 1000 of them ). 
 
-### 3 important information for this talk
+### 3 things to be noted about this talk
 - In this talk we are NOT going to exploit any CVE !
-- We will look for some jenkins features and misconfigurations.
+- We will learn about jenkins internals, features and misconfigurations.
 - We will focus exploiting point 2 !
 
