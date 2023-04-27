@@ -17,8 +17,13 @@
 - **DEMO**
 
 ### Jenkins Matrix Authorization Plugin
-- This plugin is installed during installation of Jenkins
-- 
+- By default, Authorization is set to "Logged-in Users can do anything"
+<img src="authorization1.png">
+
+- Jenkins Matrix Authorization Plugin is installed during installation of Jenkins
+- Useful to provide granual access to users
+- This is where "Security Misconfiguration Magic" happens
+<img src="authorization2.png">
 
 ### Intersting Endpoints
 
