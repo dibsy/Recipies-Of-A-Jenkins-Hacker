@@ -1,12 +1,12 @@
 # Jenkins Basics & Misconfigurations
 
-### Terminiologies
+## Terminiologies
 
 - Controllers - The master node. It manages and schedule jobs which are usually carried out by the workers/agents. The interface allows us to administer and control various tasks like managing credentials, jobs, users, plugins, etc. 
 - Agents - They are the workers which executes the job requested by the controller. It communicates with the controller via the JNLP protocol. The commmunication is usually encrypted.
 - Ephimeral - They are created. They are used. Then they are gone ! No one remembers them ! Usually a secure approach to run agents.
 
-### Jenkins Views
+## Jenkins Views
 <img src="View1.png">
 
 - Think Views like your desk. You can customize what you would like to see on them. 
@@ -16,7 +16,7 @@
 - Depending upon how views and Jenkins Matrix Authorization is configured, they can provide juicy information.
 - **DEMO**
 
-### Jenkins Matrix Authorization Plugin
+## Jenkins Matrix Authorization Plugin
 - By default, every new user has admin rights and the Authorization is set to "Logged-in Users can do anything"
 <img src="authorization1.png">
 
@@ -25,7 +25,7 @@
 - This is where "Security Misconfiguration Magic" happens
 <img src="authorization2.png">
 
-### Intersting Endpoints
+## Intersting Endpoints
 
 - Controller Routes
    - Users - http://<host:ip>/asynchPeople/
@@ -36,7 +36,7 @@
    - JSON - http://<host:ip>/api/json
 - Based on how views are configured or how the authorization matrix is set, the forced browsing can be used to view those endpoints.
 
-### How jobs are triggered 
+## Triggering builds 
 
 - Manually
 
