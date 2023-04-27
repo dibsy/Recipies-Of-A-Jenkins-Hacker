@@ -1,5 +1,8 @@
 # Recon
 
+- Depending on how views authorization are set, we can try the below process without any credentials
+- The below process will also work with credentials.
+
 ### Domains and executors ( Demo Recorded )
 
 The two interesting information we can find from this endpoint is 
