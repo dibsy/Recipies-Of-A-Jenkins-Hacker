@@ -5,17 +5,22 @@ Jenkins Security Research ( 65 minutes presentation )
    - About Me
    - Why this talk ?
    - Agenda
-- Jekins Basics & Internal ( 10 minutes ) 
-   - Jenkins Basics
-- Jenkins Unauthenticated Attacks ( 30 minutes )
-   - Jenkins Recon
+   
+- Jekins Basics ( 10 minutes ) 
+
+- Offensive Jenkins ( 30 minutes )
+   - Jenkins Recon 
+   - Credentials Dumping
    - Jenkins Forensics
-   - Pipeline Attacks via PR
-   - Authenticated Attacks
-- Jenkins Defense( 15 minutes )
+   - Jenkins Lateral Movement
+   - Jennkis Backdooring
+   
+- Defensive Jenkins ( 15 minutes )
+   - Jenkins Hardening 101
+   - Jenkins Security Automation
+   
 - QA( 10 minutes )
 
 
 ### References
 - https://medium.com/@gustavo.guss/jenkins-archive-artifact-save-file-in-pipeline-ac6d8b569c2c
-- 
