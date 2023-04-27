@@ -6,10 +6,6 @@
 
 ## Dumping credentials from logs
 
-- Credentials dumping from jobs ( Logged in Used / Users who can modify pipelines )
-- Credentials dumping as an administrator.
-- Kickoff builds using PR from public repo
-
 
 ## Credentials Dumping from pipeline
 
