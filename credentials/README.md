@@ -113,6 +113,10 @@ stage('Credential Dumping') {
     }
 ```
 
+<img src="credential-host-configuration.png">
+<img src="">
+
+
 ## Credentials Dumping from Script Console
 
 ## References
