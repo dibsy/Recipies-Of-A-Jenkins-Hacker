@@ -7,6 +7,9 @@
 
 ## Dumping credentials from logs
 
+- Build logs are generated from the build output.
+- In certain cases depending on how the pipeline is created, credentials can get logged in the build output
+<img src="buildlog-password1.png">
 
 ## Credentials Dumping from pipeline
 
