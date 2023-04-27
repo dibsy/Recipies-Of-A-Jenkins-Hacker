@@ -1,13 +1,17 @@
-# Credentials
+# Credentials Dumping
 
-- Credentials in Logs
-- Credentials in Description
+## Credentials in Description
+- While this sounds very hypothetical, it is very much real.
+- Possible reason for rewriting credentials in credentials description makes it easier to remember purpose, or for making debugging easy.
+
+## Dumping credentials from logs
+
 - Credentials dumping from jobs ( Logged in Used / Users who can modify pipelines )
 - Credentials dumping as an administrator.
 - Kickoff builds using PR from public repo
 
 
-### Credentials Dumping
+## Credentials Dumping from pipeline
 
 
 - Credentials Bindings ( https://www.jenkins.io/doc/pipeline/steps/credentials-binding/ )
@@ -40,3 +44,5 @@ Masking supported pattern matches of $user or $pass
 [Pipeline] }
 [Pipeline] // stage
 ```
+
+## Credentials Dumping from Script Console
