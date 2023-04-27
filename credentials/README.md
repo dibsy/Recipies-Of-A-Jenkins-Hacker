@@ -47,7 +47,14 @@ stage('Credential Dumping') {
         }
 ```        
 
+### Credential ID Dumping
+
+- Imagine we don't have access to  ```http://host:ip/credentials/``` to list the credentials id
+- We can either look through the code repository hunting for these id or we need a piece of luck we can use Built-In executor
+- When ```# of exectors``` in ```Configure System``` is set to non-zero, we can run builds on the controller, which means we have access to the controllers file system.
+
 ## Credentials Dumping from Script Console
 
 ## References
 - https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
+- https://www.jenkins.io/blog/2019/02/21/credentials-masking/
