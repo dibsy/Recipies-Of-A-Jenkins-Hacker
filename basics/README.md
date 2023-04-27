@@ -22,10 +22,12 @@
 ### Intersting Endpoints
 
 - Controller Endpoints
-   - /asynchPeople/
-   - /credentials/
-- Build Endpoints
-   - /job/
+   - Users - http://<host:ip>/asynchPeople/
+   - Credentials - http://<host:ip>/credentials/
+   - Jobs - http://<host:ip>/job/
+- Controller API endpoints
+   - XML - http://<host:ip>/api/xml
+   - JSON - http://<host:ip>/api/json
 - Based on how views are configured or how the authorization matrix is set, the forced browsing can be used to view those endpoints.
 
 ### How jobs are triggered 
