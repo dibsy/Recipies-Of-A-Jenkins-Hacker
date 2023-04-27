@@ -7,12 +7,13 @@
 - Ephimeral - They are created. They are used. Then they are gone ! No one remembers them ! Usually a secure approach to run agents.
 
 ### Jenkins Views
+<img src="View1.png">
 
 - Think Views like your desk. You can customize what you would like to see on them. 
 - Through views you can organize how your jenkins projects and jobs are displayed, their status, their duration,etc.
 - We can control what kind of view will be served to the end user based on the privileges.
 - There can be views avaiable without any need for authentication.
-- Depending upon how views are configured, they can provide juicy information.
+- Depending upon how views and Jenkins Matrix Authorization is configured, they can provide juicy information.
 - **DEMO**
 
 ### Jenkins Matrix Authorization Plugin
