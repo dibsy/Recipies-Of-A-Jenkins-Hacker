@@ -38,9 +38,8 @@
 
 ## Triggering builds 
 
-- Manually
+- Manually - By clicking the build button
 
-- Via Pull Requests/New Branch
+- Via Pull Requests/New Branch - As used in MultiBranch Pipeline, new builds are triggered with new Pull Requests and Branch.
 
-- Via Automation
-   - https://plugins.jenkins.io/build-token-root/
+- Via Build Token - When we want to intiate build via API / Automation , for example ```http://server:ip/job/Test1/build?token=BUILDIT```
