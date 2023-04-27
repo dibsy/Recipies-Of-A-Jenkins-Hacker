@@ -1,4 +1,4 @@
-# Jenkins Basics
+# Jenkins Basics & Misconfigurations
 
 ### Terminiologies
 
