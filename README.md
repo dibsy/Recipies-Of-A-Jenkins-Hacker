@@ -15,9 +15,9 @@
    - Lateral Movement
    - Backdooring
    
-- Defensive Jenkins ( 15 minutes )
-   - Jenkins Hardening 101
-   - Jenkins Security Automation
+- Jenkins Security Automation ( 15 minutes )
+   - Log Analysis
+   - Script Console Automation
    
 - QA( 10 minutes )
 
