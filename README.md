@@ -10,6 +10,7 @@
 - Offensive Jenkins ( 30 minutes )
    - Recon 
    - Credentials Dumping
+   - Privilege Escalations
    - Forensics
    - Lateral Movement
    - Backdooring
