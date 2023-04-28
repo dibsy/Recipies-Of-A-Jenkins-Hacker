@@ -1,4 +1,8 @@
-- Give admin access to all authenticated users
+# Privilege Escalations
+
+## Give extra permissions to user by modifying the config file
+
+## Give admin access to all authenticated users by executing a groovy script
 ```
 import jenkins.model.*
 def instance = Jenkins.getInstance()
