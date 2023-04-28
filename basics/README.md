@@ -4,6 +4,7 @@
 
 - Controllers - The master node. It manages and schedule jobs which are usually carried out by the workers/agents. The interface allows us to administer and control various tasks like managing credentials, jobs, users, plugins, etc. 
 - Agents - They are the workers which executes the job requested by the controller. It communicates with the controller via the JNLP or SSH protocol.
+- Executors Built-In - If the number of executors are set to non-zero( 1,2,etc), then the job can run on the controller. 
 - Ephimeral - They are created. They are used. Then they are gone ! No one remembers them ! Usually a secure approach to run agents.
 
 ## Jenkins Views
