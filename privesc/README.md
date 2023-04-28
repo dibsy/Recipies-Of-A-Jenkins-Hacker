@@ -1,7 +1,7 @@
 # Privilege Escalations
-- When new users are created they by default has admin access
-- The users can be given specific roles using the Authorization Matrix Plugin
-- The attacks we can try is to 
+
+- The Marix-based security/ Project-based Matrix Authorization Strategy is used to define authorization and scopes.
+- In our privilege escalation techniques we will try to escalate our privileges to an adminstrator.
 
 
 
@@ -49,7 +49,7 @@ pipeline {
 ```
 
 
-## Give admin access to all authenticated users by executing a groovy script - Technique 2
+## Escalate to adminstrator role through groovy init scripts - Technique 2 ( Restart using Pipeline )
 
 - In the previous example we were dependant on the Jenkins restart by admin. 
 - It is possible to initiate Jenkins restart by Jenkins Pipeline and in order to do so we need a script approval from admin.
@@ -108,7 +108,7 @@ pipeline {
 
 
 
-## Give extra permissions to user by modifying the config.xml file
+## Escalate to adminstrator role by modifying the config.xml file
 
 - The 1st condition for this attack is that the build has to run on the Built-In node , i.e on the Controller.
 - The 2nd condition is that either we need a restart or a reload of configuration data from disk.
