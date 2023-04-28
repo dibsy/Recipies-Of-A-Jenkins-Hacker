@@ -16,7 +16,7 @@
    - Backdooring
    
 - Jenkins Security Automation ( 15 minutes )
-   - Log Analysis
+   - Build Log Analysis
    - Script Console Automation
    
 - QA( 10 minutes )
