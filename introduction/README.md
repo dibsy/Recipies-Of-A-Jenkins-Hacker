@@ -3,7 +3,7 @@
 ### Whoami
 - Dibyendu SIKDAR
 - CTF Player, Penetration Tester, Security Engineer
-- Work in Umbrella Engineering
+- Work in Umbrella Engineering ( CISCO France )
 
 ### Why I decided to do this talk ?
 - Previously I used to think Jenkins can be compromised in two possible ways
