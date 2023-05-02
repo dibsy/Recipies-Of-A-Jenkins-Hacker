@@ -23,7 +23,7 @@ curl http://username:token@127.0.0.1:8080
 - The developers creates certain modular functions containing the repetitive code and then reuses across various projects/pipelines/jobs.
 - Personal Research : https://oxhat.blogspot.com/2022/07/attacking-backdooring-and-exfiltrating.html
 - There are 2 ways we can backdoor the shared pipelines
-  1. Add a backdoor inside a shared library codebase
+  1. Add a backdoor inside a shared library codebase ( Jenkins Admin Access Not Required )
 ``` Groovy
 @Library("shared-libraries") _
 pipeline{
@@ -39,11 +39,14 @@ pipeline{
 }
 ```
   - <img src="shared-library-code.png">
-  3. Change the shared library location to an attaker controlled shared library
+  3. Change the shared library location to an attaker controlled shared library ( Jenkins Admin Access Required )
   - <img src="shared-library-conf.png">
 
 ## Groovy init scripts
 
 ## Agents SSH Keys
+
+- We can dump the SSH keys from the Jenkins Controller
+- Once we have the SSH keys we can montitor the logon events and exfiltrate the build data or snoop on it for debug logs or credentials.
 
 ## Malicious Agents
