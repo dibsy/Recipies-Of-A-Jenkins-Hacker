@@ -118,6 +118,8 @@ stage('Credential Dumping') {
 
 
 ## Credentials Dumping from Script Console
+
+- Credentials can be dumped from the Script Console
 ``` Groovy
 //copied from https://gist.github.com/timja/04afb12c8ad909e400317a2ad9c88445
 import com.cloudbees.plugins.credentials.*
