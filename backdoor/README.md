@@ -24,8 +24,8 @@ curl http://username:token@127.0.0.1:8080
 - There are 2 ways we can backdoor the shared pipelines
   1. Add a backdoor inside a shared library codebase
   - <img src="shared-library-code.png">
-  3. Change the shared library location to an attaker controlled shared library
-
+  2. Change the shared library location to an attaker controlled shared library
+  - <img src="shared-library-conf.png">
 
 ## Groovy init scripts
 
