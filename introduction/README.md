@@ -12,13 +12,8 @@
 - I had an opinion if these two conditions are met then Jenkins is secure.
 - Sharing my observations how Jenkins is being used by various teams and studying those internet exposed Jenkins instances ( nearly 1000 of them ). 
 
-### 3 things to be noted about this talk
+### 3 things about this talk
 - In this talk we are NOT going to exploit any CVE !
 - We will learn about jenkins internals, features and misconfigurations.
 - We will focus exploiting point 2 !
 
-
-## Agenda
-
-- Jenkins High-Level Basics
-- Jenkins Recon
