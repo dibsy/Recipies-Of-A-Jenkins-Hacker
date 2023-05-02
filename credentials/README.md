@@ -47,7 +47,7 @@ stage('Credential Dumping') {
         }
 ```        
 
-### Credential ID Dumping
+## Credential ID Dumping
 
 - Imagine we don't have access to  ```http://host:ip/credentials/``` to list the credentials id
 - We can either look through the code repository hunting for these id or we need a piece of luck we can use Built-In executor
