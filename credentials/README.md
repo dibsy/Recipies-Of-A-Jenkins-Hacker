@@ -159,6 +159,12 @@ for (credential in creds) {
   } 
 }
 ```
+
+## Offline Credentials Cracking
+
+- TODO
+
+
 ## References
 - https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials 
 - https://www.jenkins.io/blog/2019/02/21/credentials-masking/
