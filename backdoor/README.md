@@ -24,8 +24,22 @@ curl http://username:token@127.0.0.1:8080
 - Personal Research : https://oxhat.blogspot.com/2022/07/attacking-backdooring-and-exfiltrating.html
 - There are 2 ways we can backdoor the shared pipelines
   1. Add a backdoor inside a shared library codebase
+``` Groovy
+@Library("shared-libraries") _
+pipeline{
+    agent any
+    stages {
+        stage("example"){
+            steps{
+                sh "echo Just a job2"
+                helloWorld(name:"User2",dayOfWeek:"Tuesday")
+            }
+        }
+    }
+}
+```
   - <img src="shared-library-code.png">
-  2. Change the shared library location to an attaker controlled shared library
+  3. Change the shared library location to an attaker controlled shared library
   - <img src="shared-library-conf.png">
 
 ## Groovy init scripts
