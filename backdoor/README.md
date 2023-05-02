@@ -48,6 +48,12 @@ pipeline{
 
 - We can dump the SSH keys from the Jenkins Controller
 - Once we have the SSH keys we can montitor the logon events and exfiltrate the build data or snoop on it for debug logs or credentials.
+
+## Addling Malicious Worker-Node 
+
+- In this process we update / add a new configuration with an attacker controller worker node.
+- We can update the Worker-Node configuration to point to that node.
+- This is possible either adding a new agent or updating the ssh keys used for configuration.
+
 <img src="configure-agent.png">
 
-## Malicious Agents
