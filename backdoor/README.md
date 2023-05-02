@@ -21,6 +21,7 @@ curl http://username:token@127.0.0.1:8080
 
 - Jenkins shared library is popular where large number of jenkins jobs or pipelines uses a repeated code in pipeline script. 
 - The developers creates certain modular functions containing the repetitive code and then reuses across various projects/pipelines/jobs.
+- Personal Research : https://oxhat.blogspot.com/2022/07/attacking-backdooring-and-exfiltrating.html
 - There are 2 ways we can backdoor the shared pipelines
   1. Add a backdoor inside a shared library codebase
   - <img src="shared-library-code.png">
