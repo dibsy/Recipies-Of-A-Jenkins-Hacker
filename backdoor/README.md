@@ -44,9 +44,10 @@ pipeline{
 
 ## Groovy init scripts
 
-## Agents SSH Keys
+## Worker-Node SSH Keys
 
 - We can dump the SSH keys from the Jenkins Controller
 - Once we have the SSH keys we can montitor the logon events and exfiltrate the build data or snoop on it for debug logs or credentials.
+<img src="configure-agent.png">
 
 ## Malicious Agents
