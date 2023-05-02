@@ -6,6 +6,7 @@
 
 
 ## User issued Jenkins API Tokens
+
 - It is possible for users to generate their own API tokens.
 - Can be used to bypass other authentication process ( Form based Authentication / 2FA authentication )
 - Usually undected ( unless the usage count is not tracked )
@@ -18,6 +19,11 @@ curl http://username:token@127.0.0.1:8080
 
 ## Using Shared Libraries
 
+- Jenkins shared library is popular where large number of jenkins jobs or pipelines uses a repeated code in pipeline script. 
+- The developers creates certain modular functions containing the repetitive code and then reuses across various projects/pipelines/jobs.
+- There are 2 ways we can backdoor the shared pipelines
+  - Add a backdoor inside a shared library codebase
+  - Change the shared library location to an attaker controlled shared library
 
 ## Groovy init scripts
 
