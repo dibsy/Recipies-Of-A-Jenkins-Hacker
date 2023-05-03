@@ -42,5 +42,9 @@ pipeline{
 }
 ```
 
+<img src="lateral-api.png">
+          
+<img src="lateral-private.png">
+
 ## Executing groovy console commands via dumped jenkins-api token.
 ## Creating an AWS resources from their dumped tokens.
