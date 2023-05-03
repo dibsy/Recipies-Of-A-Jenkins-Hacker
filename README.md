@@ -8,7 +8,8 @@
 - Jekins Basics ( 10 minutes ) 
 
 - Offensive Jenkins ( 30 minutes )
-   - Recon 
+   - Recon
+   - Pipeline Attacks
    - Credentials Dumping
    - Privilege Escalations
    - Forensics
