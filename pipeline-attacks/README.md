@@ -14,7 +14,12 @@
 
 
 
-- Attacking via a PR
-- Attacking using a build token
+## Attacking via a Pull Request
+- Opensource projects in github/gitlab allows contributors to create a Pull Request
+- To determine if the PR is able to be merged or the tests are working correctly, the maintainers configures the Build System to start a new build.
+- As an attacker if we can change the Jenkinsfile and the build runs the contents of the modified Jenkinsfile, we can carry out attacks of credential dumping,pivoting,etc
+
+
+## Attacking using a build token
 
 
