@@ -22,6 +22,8 @@
 
 ## Attacking using a build token
 
-
-
+- When we want to intiate build via API / Automation , we can use buildtoken for example http://<host:ip>/job/Test1/build?token=BUILDIT
+- If we have acccess to such build token and have enough privileges to modify the source code we can try this technique.
+- Out of curiosity I wondered it really possible to find such tokens from the public SCM, and I was surprised ;)
+ 
 <img src="buildbytoken.png">
