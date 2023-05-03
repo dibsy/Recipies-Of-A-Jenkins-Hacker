@@ -98,10 +98,15 @@ exfil.groovy
 
 - Add a build-step
 
+<img src="backdoor-build-step.png">
+
 - Add a post-build Actions to start our backdoor
 
-- Build a job that runs periodically
+<img src="backdoor-build-step-post.png">
 
+- Build a job that runs periodically ( cronjob style )
+
+<img src="backdoor-cron.png">
 
 ## Worker-Node SSH Keys
 
