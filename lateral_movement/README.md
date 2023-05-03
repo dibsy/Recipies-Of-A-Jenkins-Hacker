@@ -46,10 +46,10 @@ pipeline{
           
 <img src="lateral-private.png">
 
-## Creating resources with access tokens
+## Creating resources with with access tokens from credential bindings
 - Similarly like Github, we can try to enumerate services with the AWS Access Token
-- If we have enough privileges, we can create new AWS services with the AWS tokens
-- 
+- If we have enough privileges, we can create new AWS services with the AWS tokens - For example create an ec2 with remote ssh privileges.
+- This will not only help in moving laterally, we can use this as foothold to carry out attacks ( where we can install many tools )
 
 ## Executing groovy console commands via dumped jenkins-api token.
 
