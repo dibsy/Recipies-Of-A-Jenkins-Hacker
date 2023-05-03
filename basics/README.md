@@ -43,6 +43,6 @@
 
 - Via Pull Requests/New Branch - As used in MultiBranch Pipeline, new builds are triggered with new Pull Requests and Branch.
 
-- Via Build Token - When we want to intiate build via API / Automation , for example ```http://server:ip/job/Test1/build?token=BUILDIT```
+- Via Build Token - When we want to intiate build via API / Automation , for example ```http://<host:ip>/job/Test1/build?token=BUILDIT```
 
 <img src="buildbytoken.png">
