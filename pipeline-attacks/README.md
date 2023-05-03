@@ -16,5 +16,5 @@
 
 - Attacking via a PR
 - Attacking using a build token
-- Attacking by modifying the pipeline
+
 
