@@ -51,5 +51,4 @@ pipeline{
 - If we have enough privileges, we can create new AWS services with the AWS tokens - For example create an ec2 with remote ssh privileges.
 - This will not only help in moving laterally, we can use this as foothold to carry out attacks ( where we can install many tools )
 
-## Executing groovy console commands via dumped jenkins-api token.
 
