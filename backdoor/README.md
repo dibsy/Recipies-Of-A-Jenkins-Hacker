@@ -94,6 +94,15 @@ exfil.groovy
     - Add a cronjob
     - Add another user
 
+## Triggering backdoor jobs
+
+- Add a build-step
+
+- Add a post-build Actions to start our backdoor
+
+- Build a job that runs periodically
+
+
 ## Worker-Node SSH Keys
 
 - We can dump the SSH keys from the Jenkins Controller
