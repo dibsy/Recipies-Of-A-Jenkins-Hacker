@@ -6,11 +6,11 @@
 - Therefore, it is worth performing a network scan to find the reachable services, enumerate ports and see if we can exploit any of the services in corp environment.
 - We can also use build logs to find if any such corp environment is accessed through analyzing build logs.
 
-## Enumerating services with access tokens
-- If we are successful in dumping tokens, we should review what kind of privileges that token hold and what we can do with it.
+## Enumerating services with access tokens from credential bindings
+- If we are successful in dumping tokens or reusing tokens in credentials bindings, we should review what kind of privileges that token hold and what we can do with it.
 - For our understanding, let us take an example of github access token.
   - We can try to enumerate various services the token has privileges to perform.
-  - So imagine you have access to an admin level personal access token, then there is no limit to the things you can do - Dump credentials, backdoor code, etc
+  - So imagine you have access to an admin level personal access token, then there a whole world of possibilites - Dump credentials, backdoor code, etc
   - We can also have access to private repositories and we can view the cloned contents in the workspace :) 
 ``` Groovy
 pipeline{
@@ -46,5 +46,10 @@ pipeline{
           
 <img src="lateral-private.png">
 
+## Creating resources with access tokens
+- Similarly like Github, we can try to enumerate services with the AWS Access Token
+- If we have enough privileges, we can create new AWS services with the AWS tokens
+- 
+
 ## Executing groovy console commands via dumped jenkins-api token.
-## Creating an AWS resources from their dumped tokens.
+
