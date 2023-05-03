@@ -45,4 +45,3 @@
 
 - Via Build Token - When we want to intiate build via API / Automation , for example ```http://<host:ip>/job/Test1/build?token=BUILDIT```
 
-<img src="buildbytoken.png">
