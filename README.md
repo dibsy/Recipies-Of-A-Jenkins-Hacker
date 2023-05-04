@@ -1,13 +1,13 @@
 # Recipies of a Jenkins Hacker
 
-- Introduction ( 5 minutes )
+- Introduction
    - About Me
    - Why this talk ?
    - Agenda
    
-- Jekins Basics ( 10 minutes ) 
+- Jekins Basics
 
-- Offensive Jenkins ( 30 minutes )
+- Offensive Jenkins
    - Recon
    - Pipeline Attacks
    - Credentials Dumping
@@ -16,11 +16,11 @@
    - Lateral Movement
    - Backdooring
    
-- Jenkins Security Automation ( 15 minutes )
+- Jenkins Security Automation
    - Build Log Analysis
    - Script Console Automation
    
-- QA( 10 minutes )
+- Q&A
 
 ## Tool Release
 
