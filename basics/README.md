@@ -1,4 +1,5 @@
 # Jenkins Basics & Misconfigurations
+- This section will introduce us to few terminologies and some features of jenkins that can be misconfigured and exploited
 
 ## Terminiologies
 
@@ -26,7 +27,7 @@
 - This is where "Security Misconfiguration Magic" happens
 <img src="authorization2.png">
 
-## Intersting Endpoints
+## Interesting Endpoints
 
 - Controller Routes
    - Users - http://<host:ip>/asynchPeople/
