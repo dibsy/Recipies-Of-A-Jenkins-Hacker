@@ -160,6 +160,12 @@ for (credential in creds) {
 }
 ```
 
+### Global Credentials
+
+- There can be credentials that can be limited to one project but configured as a global credential.
+- Global credentials are avaiable in all the projects. Hence if one project pipeline / scm is compromised, the secured ones will also be affected.
+- Imagine if we have AWS Access keys that are marked as global crdential used in Project A. Project B will also have access to that credential.
+
 ## Offline Credentials Cracking
 
 - TODO
