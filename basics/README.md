@@ -8,7 +8,7 @@
    - Agents - They are the workers which executes the job requested by the controller. It communicates with the controller via the JNLP or SSH protocol.
    - Controller's Built-In - If the number of executors are set to non-zero( 1,2,etc), then the job can run on the controller built-in node. They have the access to jenkins controllers host files and resources.  
 - Ephimeral - "Something that lives for short duration". They are created. They are used. Then they are gone ! No one remembers them ! Usually a secure approach to run agents.
-- Configuration Files - They are stored in the host running the Jenkins controllers. All jenkins configuration are stored as files. There is no integrity check! 
+- Configuration Files - They are stored in the host running the Jenkins controllers. All jenkins configuration are stored as xml text files. There is no integrity check! 
 
 ## Jenkins Views
 <img src="View1.png">
