@@ -3,42 +3,56 @@
 - Depending on how views authorization are set, we can try the below process without any credentials
 - The below process will also work with credentials.
 
-### Domains and executors ( Demo Recorded )
+### Domains and executors
 
-The two interesting information we can find from this endpoint is 
+We can get multiple juicy information from the endpoint http://jenkins-server/api/json
 - Num Executors of Built-In - If this is set 0, then the builds are carried out in agents, if not then the controller is also used for jobs
 - url - In somecases this will point to the domain, or subdomain. From the analysis of the exposed Jenkins controllers we found this url information can help us to find the organization which this controller belongs to. We tried performing reverse-ip lookups but in somecases it failed or pointed to the cloud infrastructure.
+- Project Names
+- Build Informations
 
-``` xml
-<hudson _class="hudson.model.Hudson">
-<assignedLabel>
-<name>built-in</name>
-</assignedLabel>
-<mode>NORMAL</mode>
-<nodeDescription>the Jenkins controller's built-in node</nodeDescription>
-<nodeName/>
-<numExecutors>0</numExecutors>
-<job _class="hudson.model.FreeStyleProject">
-<name>Test1</name>
-<url>http://52.91.169.109:8080/job/Test1/</url>
-<color>blue</color>
-</job>
-<overallLoad/>
-<primaryView _class="hudson.model.AllView">
-<name>all</name>
-<url>http://52.91.169.109:8080/</url>
-</primaryView>
-<quietingDown>false</quietingDown>
-<slaveAgentPort>-1</slaveAgentPort>
-<unlabeledLoad _class="jenkins.model.UnlabeledLoadStatistics"/>
-<url>http://52.91.169.109:8080/</url>
-<useCrumbs>true</useCrumbs>
-<useSecurity>true</useSecurity>
-<view _class="hudson.model.AllView">
-<name>all</name>
-<url>http://52.91.169.109:8080/</url>
-</view>
-</hudson>
+``` json
+{
+  "_class" : "hudson.model.Hudson",
+  "assignedLabels" : [
+    {
+      "name" : "built-in"
+    }
+  ],
+  "mode" : "NORMAL",
+  "nodeDescription" : "the Jenkins controller's built-in node",
+  "nodeName" : "",
+  "numExecutors" : 2,
+  "description" : null,
+  "jobs" : [
+  <SNIP>
+  "primaryView" : {
+    "_class" : "hudson.model.AllView",
+    "name" : "all",
+    "url" : "http://52.91.169.109:8080/"
+  },
+  "quietDownReason" : null,
+  "quietingDown" : false,
+  "slaveAgentPort" : -1,
+  "unlabeledLoad" : {
+    "_class" : "jenkins.model.UnlabeledLoadStatistics"
+  },
+  "url" : "http://52.91.169.109:8080/",
+  "useCrumbs" : true,
+  "useSecurity" : true,
+  "views" : [
+    {
+      "_class" : "hudson.model.ListView",
+      "name" : "Random",
+      "url" : "http://52.91.169.109:8080/view/Random/"
+    },
+    {
+      "_class" : "hudson.model.AllView",
+      "name" : "all",
+      "url" : "http://52.91.169.109:8080/"
+    }
+  ]
+}
 ```
 
 ### Build Logs
