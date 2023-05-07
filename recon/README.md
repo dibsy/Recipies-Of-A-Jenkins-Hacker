@@ -1,7 +1,8 @@
 # Recon
 
-- Depending on how views authorization are set, we can try the below process without any credentials
-- The below process will also work with credentials.
+- This part assume we already found some publicly exposed Jenkins Controller.
+- Depending on how authorization matrix is configured our success and failure will depend on it.
+- The below process will also work with credentials w/o credentials.
 
 ### Domains and executors
 
