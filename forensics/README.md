@@ -1,4 +1,6 @@
 # Forensics with Jenkins
+- If the builds agents are not ephemeral, we may get access to some of the existing build data.
+- Workspace is an idential location for doing forensics too.
 
 ## Workspace forensics
 - Looking into private repo
