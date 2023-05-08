@@ -13,6 +13,8 @@
 <img src="pipeline-replay-modify.png">
 
 ## Configurable Jobs
+- Changing the configuration due to permission misconfiguration ( Freestyle Projects )
+
 
 ## Attacking via a Pull Request
 - Opensource projects in github/gitlab allows contributors to create a Pull Request
