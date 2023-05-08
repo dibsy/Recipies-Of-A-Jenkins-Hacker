@@ -7,10 +7,13 @@
 ### Domains and executors
 
 We can get multiple juicy information from the endpoint ```http://jenkins-server/api/json```
-- Num Executors of Built-In - If this is set 0, then the builds are carried out in agents, if not then the controller's built-in is also used for build jobs.
-- url - In somecases this will point to the domain, or subdomain. From the analysis of the exposed Jenkins controllers we found this url information can help us to find the organization which this controller belongs to. We tried performing reverse-ip lookups but in somecases it failed or pointed to the cloud infrastructure.
+- Number of Executors for Built-In
+  - If the value is 0, then the builds are carried out in workers/agents, if not then the controller's built-in is also used for build jobs!
+
+- url
+  - In somecases this will point to the domain, or subdomain. From the analysis of the exposed Jenkins controllers we found this url information can help us to find the organization which this controller belongs to. We tried performing reverse-ip lookups but in somecases it failed or pointed to the cloud infrastructure.
 - Project Names.
-- Job Information.
+- Job/Build Information.
 
 ``` json
 {
