@@ -1,7 +1,7 @@
 # Privilege Escalations
 
-- The Marix-based security/ Project-based Matrix Authorization Strategy is used to define authorization and scopes.
-- In our privilege escalation techniques we will try to escalate our privileges to an adminstrator.
+- The Matrix-based security/ Project-based Matrix Authorization Strategy is used to define authorization and scopes.
+- In our privilege escalation techniques we will try to escalate our privileges to an administrator.
 
 
 
