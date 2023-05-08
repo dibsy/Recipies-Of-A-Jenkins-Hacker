@@ -9,6 +9,7 @@
 We can get multiple juicy information from the endpoint ```http://jenkins-server/api/json```
 - Number of Executors for Built-In
   - If the value is 0, then the builds are carried out in workers/agents, if not then the controller's built-in is also used for build jobs!
+  - In case you run your builds on agents/worker and they go offline, the builds will run on the Built-In if the non-zero value is present.
 
 - url
   - In somecases this will point to the domain, or subdomain. From the analysis of the exposed Jenkins controllers we found this url information can help us to find the organization which this controller belongs to. We tried performing reverse-ip lookups but in somecases it failed or pointed to the cloud infrastructure.
