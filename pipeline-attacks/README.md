@@ -1,5 +1,8 @@
 # Pipeline Attacks
 
+- Some attacks like Replaying the Pipeline / Configuring the job by an unauthenticated user is possible due to misconfiguration.
+
+
 ## Attacking via a compromised GitHub code
 - If we are able to access the SCM ( like GitHub, GitLab, etc), we can look for the Jenkinfile.
 - If we have enough privileges( write access available ) , we can modify the Jenkinfile with our own modification.
