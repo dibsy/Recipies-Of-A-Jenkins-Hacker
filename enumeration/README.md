@@ -160,10 +160,10 @@ Artifacts from the build are available at
 ```
 ### Question to ask with the obtained information
 
-- Are those private url reachable ?
-- Can I try to access those url if I have a pipeline that I can modify ?
-- Do these username are the the same ones used for login purpose in the corporate enviroment
-- Can I do a password spray with the username obtained ?
-- Can I replicate a resource url for a 404 error ?
-- Can I find any public github account of the user ? ( **if you find any account, do search for any credentials through the repos in that account as there is a chance to get some corporate credentials or information which has been exposed accidentally** )
+- Are those obatined internal urls reachable?
+- Can I try to access those url if I have a pipeline that I can modify?
+- Do these username are the the same ones used for login purpose in the corporate enviroment?
+- Can I do a password spray with the username obtained?
+- Can I replicate a resource url for a 404 error?
+- Can I find any public github account of the user? ( **if you find any account, do search for any credentials through the repos in that account as there is a chance to get some corporate credentials or information which has been exposed accidentally** )
 
