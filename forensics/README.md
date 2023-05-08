@@ -1,5 +1,9 @@
 # Forensics with Jenkins
 
+## Workspace forensics
+- Looking into private repo
+- Downloading private repo
+- Scanning for data on those private repo
 
 ## Build Log Analysis
 - Not only we can find credentials from build logs, but interesting urls too!
