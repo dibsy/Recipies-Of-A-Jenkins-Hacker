@@ -1,4 +1,4 @@
-# Recon
+# Enumeration
 
 - This part assume we already found some publicly exposed Jenkins Controller.
 - Depending on how authorization matrix is configured our success and failure will depend on it.
