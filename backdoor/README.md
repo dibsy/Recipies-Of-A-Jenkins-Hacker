@@ -5,7 +5,7 @@
 
 
 
-## User issued Jenkins API Tokens
+## Using User issued Jenkins API Tokens
 
 - It is possible for users to generate their own API tokens.
 - Can be used to bypass other authentication process ( Form based Authentication / 2FA authentication )
@@ -42,7 +42,7 @@ pipeline{
   3. Change the shared library location to an attaker controlled shared library ( Jenkins Admin Access Required )
   - <img src="shared-library-conf.png">
 
-## Groovy init scripts
+## Using Groovy init scripts
 
 - We can try this technique both from pipeline / after controller's compromise.
 - We need to add ```init.groovy``` file with our payload at home directory ( the directory that contains other config files pf Jenkins, sometimes referred as $JENKINS_HOME )
@@ -108,12 +108,12 @@ exfil.groovy
 
 <img src="backdoor-cron.png">
 
-## Worker-Node SSH Keys
+## Using Worker-Node SSH Keys
 
 - We can dump the SSH keys from the Jenkins Controller
 - Once we have the SSH keys we can montitor the logon events and exfiltrate the build data or snoop on it for debug logs or credentials.
 
-## Addling Malicious Worker-Node 
+## Adding Malicious Worker-Node 
 
 - In this process we update / add a new configuration with an attacker controller worker node.
 - We can update the Worker-Node configuration to point to that node.
