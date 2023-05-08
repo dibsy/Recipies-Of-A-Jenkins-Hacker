@@ -1,8 +1,8 @@
 # Enumeration
 
-- This part assume we already found some publicly exposed Jenkins Controller.
-- Depending on how authorization matrix is configured our success and failure will depend on it.
-- The below process will also work with credentials w/o credentials.
+- Depending on how authorization matrix is configured either we will be presented with a Jenkins View or Authentication Window
+- If there is no authentication process involved, the below techniques will work.
+- The techniques also work if you have credentials that authenticates you and present you with a Jenkins View.
 
 ### Domains and executors
 
