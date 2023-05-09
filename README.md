@@ -8,7 +8,7 @@
 - Jenkins Basics
 
 - Offensive Jenkins
-   - Recon
+   - Enumeration
    - Pipeline Attacks
    - Credentials Dumping
    - Privilege Escalations
