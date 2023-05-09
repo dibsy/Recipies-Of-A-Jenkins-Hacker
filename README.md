@@ -24,7 +24,9 @@
 
 ## Tool Release
 
-- Jenkills 
+- Jenkills - https://github.com/dibsy/jenkills
+
+I wrote some quick hacky scripts during my research work which can be found here.
 
 ### References
 - https://medium.com/@gustavo.guss/jenkins-archive-artifact-save-file-in-pipeline-ac6d8b569c2c
