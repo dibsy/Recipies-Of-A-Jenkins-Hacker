@@ -5,7 +5,7 @@
    - Why this talk ?
    - Agenda
    
-- Jekins Basics
+- Jenkins Basics
 
 - Offensive Jenkins
    - Recon
