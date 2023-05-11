@@ -17,7 +17,7 @@
 
 ## Configurable Jobs
 - Changing the configuration due to permission misconfiguration ( Freestyle Projects )
-
+- Add a build step ( execute a shell script )
 
 ## Attacking via a Pull Request
 - Opensource projects in github/gitlab allows contributors to create a Pull Request
