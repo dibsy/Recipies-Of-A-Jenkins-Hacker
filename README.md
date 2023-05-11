@@ -30,7 +30,8 @@ I wrote some quick hacky scripts during my research work which can be found here
 
 ### References
 - https://medium.com/@gustavo.guss/jenkins-archive-artifact-save-file-in-pipeline-ac6d8b569c2c
-
+- https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
+- https://owasp.org/www-project-top-10-ci-cd-security-risks/
 ### DISCLAIMER
 
 - DISCLAIMER : NO PUBLIC JENKINS CONTROLLERS WERE EXPLOITED DURING MY RESEARCH
