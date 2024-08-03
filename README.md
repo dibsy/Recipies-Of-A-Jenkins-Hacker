@@ -28,6 +28,9 @@
 
 I wrote some quick hacky scripts during my research work which can be found here.
 
+## Profits 
+- Found an exposed jenkins instance belonging to HPE and reported them - https://oxhat.blogspot.com/2023/10/responsible-disclosure-security.html 
+
 ### References
 - https://medium.com/@gustavo.guss/jenkins-archive-artifact-save-file-in-pipeline-ac6d8b569c2c
 - https://www.codurance.com/publications/2019/05/30/accessing-and-dumping-jenkins-credentials
