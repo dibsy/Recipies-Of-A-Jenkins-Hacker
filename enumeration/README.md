@@ -4,6 +4,17 @@
 - If there is no authentication process involved, the below techniques will work.
 - The techniques also work if you have credentials that authenticates you and present you with a Jenkins View.
 
+### Jenkins Versions
+
+We can look for headers in the http responses.
+
+```http
+X-Hudson: 1.395
+X-Jenkins: 2.440
+Server: Jetty(10.0.20)
+```
+
+
 ### Domains and executors
 
 We can get multiple juicy information from the endpoint ```http://jenkins-server/api/json```
